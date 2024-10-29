@@ -9,7 +9,7 @@ const fsRelativePath = './epub/'
 
 // Cookie value sent to jigsaw.vitalsource.com from the browser
 // including: reese84 + jigsaw_session
-const globalCookieVal = ``
+const globalCookieVal = `1.1.1690078480.1730179105`
 
 const writeIntoFS = async (filepath, contents) => {
   const file = path.resolve(fsRelativePath, filepath)
@@ -40,7 +40,7 @@ const fetchURL = async epubPath => {
     method: 'get',
     transformResponse: [d => d],
     responseType: 'arraybuffer',
-    headers: { Cookie: globalCookieVal }
+    headers: { Cookie: CookieVal }
   })
   return data
 }
